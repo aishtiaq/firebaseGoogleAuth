@@ -46,8 +46,6 @@
             };
         firebase.initializeApp(config);
         var provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth().signInWithRedirect(provider);
-
         var signedIn=false;
 
         firebase.auth().signInWithPopup(provider).then(function(result) {
